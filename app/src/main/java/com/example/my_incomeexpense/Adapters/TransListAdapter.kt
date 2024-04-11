@@ -3,7 +3,6 @@ package com.hkinfo.mybudget_traker.Adapters
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View

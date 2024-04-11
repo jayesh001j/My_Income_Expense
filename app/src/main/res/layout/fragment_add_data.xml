@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#E7E9F4"
-    tools:context=".Activity.AddDatatActivity">
+    android:background="#FFF6E5"
+    tools:context=".Fragment.AddDatatActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +23,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:fontFamily="@font/inter_black"
                 android:letterSpacing="0.03"
                 android:gravity="center"
                 android:text="- TRANSACTION -"
-                android:textColor="@color/black"
+                android:textColor="#2196F3"
                 android:textSize="18dp"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -56,8 +56,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:gravity="center"
+                    android:fontFamily="@font/inter_black"
                     android:text="Income"
-                    android:textColor="@color/black"
                     android:textSize="14dp"
                     tools:ignore="TextSizeCheck" />
 
@@ -77,8 +77,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:gravity="center"
+                    android:fontFamily="@font/inter_black"
                     android:text="Expense"
-                    android:textColor="@color/black"
                     android:textSize="14dp"
                     tools:ignore="TextSizeCheck" />
 
@@ -91,25 +91,25 @@
             android:gravity="center"
             android:layout_marginLeft="20dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/txtDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/edit"
+                android:fontFamily="@font/inter_black"
                 android:padding="10dp"
                 android:text="12/04/2023"
                 android:textSize="17dp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/txtTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_black"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/edit"
                 android:padding="10dp"
                 android:text="Time"
                 android:textSize="17dp" />
@@ -130,7 +130,6 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:background="@null"
-                android:inputType="number"
                 android:textSize="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -139,7 +138,8 @@
                     android:layout_height="wrap_content"
                     android:padding="15dp"
                     android:hint="Amount"
-                    android:inputType="text"
+                    android:fontFamily="@font/inter_black"
+                    android:inputType="number"
                     android:textSize="16dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -160,13 +160,13 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:background="@null"
-                android:inputType="number"
                 android:textSize="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_black"
                     android:padding="15dp"
                     android:hint="Title"
                     android:inputType="text"
@@ -193,13 +193,13 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:background="@null"
-                android:inputType="number"
                 android:textSize="16dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <Spinner
                     android:id="@+id/edtCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_black"
                     android:padding="15dp"
                     android:hint="Category"
                     android:inputType="text"
@@ -225,7 +225,6 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:background="@null"
-                android:inputType="number"
                 android:textSize="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -233,6 +232,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="15dp"
+                    android:fontFamily="@font/inter_black"
                     android:hint="Notes"
                     android:inputType="text"
                     android:textSize="16dp"/>
@@ -262,6 +262,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Add Income"
+                    android:fontFamily="@font/inter_black"
                     android:gravity="center"
                     android:padding="2dp"
                     android:layout_margin="10dp"

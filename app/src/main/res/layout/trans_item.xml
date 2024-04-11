@@ -55,7 +55,7 @@
             android:text="Title"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
+            android:fontFamily="@font/inter_extra_bold"
             android:layout_marginStart="18dp" />
 
         <TextView
@@ -65,6 +65,7 @@
             android:layout_marginStart="18dp"
             android:text="Category"
             android:textColor="#3E3E3E"
+            android:fontFamily="@font/inter_semi_bold"
             android:textSize="14dp"
             tools:ignore="TextSizeCheck" />
     </LinearLayout>
@@ -74,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Amount"
+        android:fontFamily="@font/inter_black"
         android:layout_gravity="center"
         android:textSize="18dp"/>
 

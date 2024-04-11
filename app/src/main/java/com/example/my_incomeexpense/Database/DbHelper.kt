@@ -5,6 +5,9 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.provider.Telephony.Mms.Part.NAME
+import android.provider.Telephony.Mms.Part.TEXT
+import com.example.income_expence.model.CategoryModel
 import com.hkinfo.mybudget_traker.Models.TransModel
 
 class DbHelper(
@@ -22,16 +25,30 @@ class DbHelper(
     var MONTH = "month"
     var YEAR = "year"
 
-    override fun onCreate(p0: SQLiteDatabase?) {
+    override fun onCreate(db: SQLiteDatabase?) {
+        // Create the main table
+        val sql =
+            "CREATE TABLE $TABLE_NAME($Id INTEGER PRIMARY KEY AUTOINCREMENT, $AMOUNT INTEGER, $TITLE TEXT, $CATEGORY TEXT, $NOTE TEXT, $IS_EXPENCE INTEGER, $DATE TEXT, $MONTH TEXT, $YEAR TEXT)"
+        db?.execSQL(sql)
 
-        var sql =
-            "CREATE TABLE $TABLE_NAME($Id INTEGER PRIMARY KEY AUTOINCREMENT ,$AMOUNT INTEGER , $TITLE TEXT, $CATEGORY TEXT, $NOTE TEXT, $IS_EXPENCE INTEGER, $DATE TEXT, $MONTH TEXT, $YEAR TEXT)"
-        p0?.execSQL(sql)
+        val queryCategory =
+            "CREATE TABLE Category ($Id INTEGER PRIMARY KEY AUTOINCREMENT, $TEXT)"
+        db?.execSQL(queryCategory)
     }
+
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
 
     }
+
+    fun addCategory(categoryName: String) {
+        val db = writableDatabase
+        val contentValues = ContentValues().apply {
+            put("name", categoryName)
+        }
+        db.insert("Category", null, contentValues)
+    }
+
 
     fun addAmount(transModel: TransModel) {
         var db = writableDatabase
@@ -99,4 +116,29 @@ class DbHelper(
         var db = readableDatabase
         db.delete(TABLE_NAME,"id = $id",null)
     }
+
+//    fun getCategory(): java.util.ArrayList<CategoryModel> {
+//        var list = arrayListOf<CategoryModel>()
+//        val db = readableDatabase
+//        val query = "SELECT * FROM Category"
+//        var cusor = db.rawQuery(query, null)
+//
+//        if (cusor.moveToFirst()) {
+//            do {
+//                var id = cusor.getString(cusor.getColumnIndex("id"))
+//                var name = cusor.getString(cusor.getColumnIndex("name"))
+//                var model = CategoryModel(id, name)
+//                list.add(model)
+//            } while (cusor.moveToNext())
+//        }
+//
+//        return list
+//    }
+
+
 }
+
+
+
+
+

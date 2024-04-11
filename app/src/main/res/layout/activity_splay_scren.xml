@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splay_scren">
+
+    <RelativeLayout
+        android:layout_width="414sp"
+        android:layout_height="600sp"
+        android:id="@+id/r1"
+        android:background="@drawable/backrownd"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="277sp"
+            android:layout_height="461sp"
+            android:src="@drawable/spayscren"/>
+
+        <ImageView
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginTop="90sp"
+            android:layout_marginLeft="180sp"
+            android:src="@drawable/img_1"/>
+
+        <ImageView
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginTop="60sp"
+            android:layout_marginLeft="25sp"
+            android:src="@drawable/img_2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450sp"
+        android:layout_below="@+id/r1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/inter_black"
+            android:textColor="#438883"
+            android:text="Spend Smarter
+            Save More"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

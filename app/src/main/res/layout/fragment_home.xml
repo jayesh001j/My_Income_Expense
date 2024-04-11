@@ -1,156 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp"
     android:background="#E7E9F4"
-    tools:context=".Activity.HomeFragment"
+    tools:context=".Fragment.HomeFragment"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="414sp"
+        android:layout_height="287sp"
+        android:background="@drawable/ic_topbar">
+
+
+        <TextView
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/inter_black"
+            android:text="Good afternoon"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60sp"
+            android:layout_marginRight="24sp"
+            android:src="@drawable/ic_notification" />
+
+
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="60sp"
+            android:fontFamily="@font/inter_black"
+            android:text="JAYESH PARMAR"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Accounts :"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginStart="10dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="145sp"
+        app:cardBackgroundColor="#2F7E79"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="20sp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#1FBA48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35sp"
+            android:layout_marginTop="15sp"
+            android:fontFamily="@font/inter_black"
+            android:text="Total   Balance "
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135sp"
+            android:layout_marginTop="23sp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/imgAddCategory"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280sp"
+            android:layout_marginTop="15sp"
+            android:src="@drawable/dots_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="40sp"
+            android:fontFamily="@font/inter_black"
+            android:text="$"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            tools:ignore="TextSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/allover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45sp"
+            android:layout_marginTop="40sp"
+            android:fontFamily="@font/inter_black"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            tools:ignore="TextSizeCheck" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Income :"
-                android:layout_gravity="center|top"
+                android:layout_width="53sp"
+                android:layout_height="19sp"
+                android:layout_marginLeft="52sp"
+                android:layout_marginTop="119sp"
+                android:fontFamily="@font/inter_black"
+                android:text="Income  "
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginLeft="24sp"
+            android:layout_marginTop="118sp"
+            android:src="@drawable/ic_income" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="135sp"
+            android:fontFamily="@font/inter_black"
+            android:padding="20dp"
+            android:text="$"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txtIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35sp"
+            android:layout_marginTop="135sp"
+            android:fontFamily="@font/inter_black"
+            android:padding="20dp"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="TextSizeCheck" />
+
 
             <TextView
-                android:id="@+id/txtIncome"
+                android:layout_width="77sp"
+                android:layout_height="22sp"
+                android:layout_gravity="center|top"
+                android:layout_marginLeft="105sp"
+                android:layout_marginTop="117dp"
+                android:fontFamily="@font/inter_black"
+                android:textColor="@color/white"
+                android:text="Expense "
+                android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginLeft="200sp"
+            android:layout_marginTop="118sp"
+            android:src="@drawable/ic_expense" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="00"
-                android:textColor="@color/white"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="8dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#CF3434">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Expense :"
-                android:layout_gravity="center|top"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:id="@+id/txtExpense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="65sp"
+                android:layout_marginTop="70sp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:padding="20dp"
-                android:text="00"
+                android:fontFamily="@font/inter_black"
+                android:text="$"
                 android:textColor="@color/white"
-                android:textSize="14dp"
-                android:textStyle="bold"
+                android:textSize="20dp"
                 tools:ignore="TextSizeCheck" />
 
-        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/txtExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="110sp"
+            android:layout_marginTop="70sp"
+            android:fontFamily="@font/inter_black"
+            android:text="00"
+            android:textColor="@color/white"
+            android:padding="20dp"
+            android:textSize="20dp"
+            tools:ignore="TextSizeCheck"  />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="10dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="#FF9800">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total :"
-                android:layout_gravity="center|top"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:id="@+id/allover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="00"
-                android:textColor="@color/white"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
 
         </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
 
     <TextView
+        android:id="@+id/Transactions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:text="Transactions :"
+        android:layout_below="@+id/card1"
+        android:layout_marginStart="22sp"
+        android:fontFamily="@font/inter_medium"
         android:textColor="@color/black"
-        android:textStyle="bold"
+        android:text="Transactions history"
         android:textSize="18dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/Transactions"
+        android:padding="10sp"
         android:layout_weight="1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/transList"
             android:layout_width="match_parent"
+            android:fontFamily="@font/inter_black"
             android:layout_height="match_parent" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
+

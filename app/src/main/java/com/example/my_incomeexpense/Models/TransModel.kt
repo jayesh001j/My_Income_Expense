@@ -1,7 +1,5 @@
 package com.hkinfo.mybudget_traker.Models
 
-import java.time.Month
-
 class TransModel {
 
     var id = 0
@@ -15,6 +13,7 @@ class TransModel {
     lateinit var year: String
 
     constructor(
+
         id: Int,
         amt: Int,
         category: String,
@@ -35,4 +34,5 @@ class TransModel {
         this.month = month
         this.year = year
     }
+
 }

@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.My_IncomeExpense" parent="Base.Theme.My_IncomeExpense" />
+
+<!--    <style name="feb_3_rounded.">-->
+
+<!--        <item name="cornerSize">50%</item>-->
+
+<!--    </style>-->
 </resources>
